@@ -2,7 +2,7 @@ from genericpath import isfile
 from os import path, getenv, stat, listdir
 
 
-BEAMNG_VER = '0.24'
+BEAMNG_VER = '0.25'
 BEAMNG_USER_PATH = path.join(getenv('LOCALAPPDATA'), 'BeamNG.drive', BEAMNG_VER, 'mods')
 
 def get_files_sorted():

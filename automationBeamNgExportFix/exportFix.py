@@ -4,7 +4,10 @@ from os import path
 from typing import List
 
 TARGET_LINES = [br'"cylinderWallTemperatureDamageThreshold"',
-                br'"damageThresholdTemperature"']
+                br'"damageThresholdTemperature"',
+                br'"headGasketDamageThreshold"',
+                br'"pistonRingDamageThreshold"',
+                br'"connectingRodDamageThreshold"']
 
 NEW_VALUE_STRING = b'99999999'
 

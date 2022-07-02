@@ -9,7 +9,7 @@
             "type": "python",
             "request": "launch",
             "module": "automationBeamNgExportFix",
-            "args": ["-f", "C:\\Users\\Jonat\\AppData\\Local\\BeamNG.drive\\0.24\\mods\\fastymccarface.zip"]
+            "args": ["-a", "1"]
         }
     ]
 }
