@@ -12,12 +12,16 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Update mod exported into BeamNG Drive from Automation for turbo overheating bug. Can be done either automatically on a set number of most recent files or on a specified file path')
     parser.add_argument('-f', dest='filepath', help='Filepath to operate on', metavar='FILE', type=check_file)
     parser.add_argument('-a', dest='auto_count', help='Automatically operate on latest files in BeamNG mods folder', metavar='N', type=int)
+    parser.add_argument('-v', dest='version', help='Version of BeamNG to target. If no version provided will attempt to find the latest', metavar='V', type=str)
     args = parser.parse_args()
+    ver = None
     if not(args.filepath or args.auto_count):
         parser.error('Must select at least one option')
     if args.filepath:
         exportFix.fix_file(args.filepath)
+    if args.version:
+        ver = args.version
     if args.auto_count:
-        for file in get_files.get_files_sorted()[:args.auto_count]:
+        for file in get_files.get_files_sorted(ver)[:args.auto_count]:
             exportFix.fix_file(file)
         

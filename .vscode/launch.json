@@ -9,7 +9,7 @@
             "type": "python",
             "request": "launch",
             "module": "automationBeamNgExportFix",
-            "args": ["-a", "1"]
+            "args": ["-a", "3"]
         }
     ]
 }
