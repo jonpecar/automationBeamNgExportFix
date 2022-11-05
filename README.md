@@ -6,4 +6,4 @@ It will modify `cylinderWallTemperatureDamageThreshold` and `damageThresholdTemp
  thermal modelling between the games causing cars to fail immediately due to overheat.
  
 Can be used with the `-f FILE` argument to operate on a given zip or with the `-a N` argument to operate on N number of most recent zips in the BeamNG Drive mods folder of 
-the current user.
+the current user. Tool will automatically detect the latest BeamNG version directory, but a different version can be specified with the `-v V` argument.
