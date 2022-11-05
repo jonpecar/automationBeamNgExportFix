@@ -1,0 +1,42 @@
+[build-system]
+requires      = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "automationBeamNgExportFix"
+version = "1.3.0"
+description = "Tool to fix overheating issues in Automation the Car Company Tycoon Game exports into BeamNG.drive"
+readme = "README.md"
+authors = [{name = "Jonathan Pecar", email = "jonathan.pecar@gmail.com"}]
+license = { file = "LICENSE"}
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+]
+requires-python = ">=3.6"
+[project.optional-dependencies]
+dev = ["bumpver", "setuptools"]
+
+[project.urls]
+Homepage = "https://github.com/jonpecar/automationBeamNgExportFix"
+[tool.bumpver]
+current_version = "1.3.0"
+version_pattern = "MAJOR.MINOR.PATCH"
+commit_message = "bump version {old_version} -> {new_version}"
+commit = true
+tag = true
+push = true
+
+[tool.bumpver.file_patterns]
+'pyproject.toml' = [
+    'current_version = "{version}"',
+    'version = "{version}"',
+]
+'automationBeamNgExportFix\\__init__.py' = [
+    '__version__ = "{version}"',
+]
+
